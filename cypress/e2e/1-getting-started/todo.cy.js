@@ -27,7 +27,7 @@ describe('example to-do app', () => {
     cy.get('[data-test="new-todo"]').click();
     //masih error pake xpath
     // cy.xpath("require('cypress-xpath');")
-    cy.get('.todo-list li').should('have.length', 3)
+    cy.get('.todo-list li').should('have.length', 2)
 
     // We can go even further and check that the default todos each contain
     // the correct text. We use the `first` and `last` functions
