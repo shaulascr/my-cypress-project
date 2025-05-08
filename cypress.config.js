@@ -16,6 +16,12 @@ module.exports = defineConfig({
     },
     supportFile:"cypress/support/e2e.js",
     defaultCommandTimeout: 30000, //atur waktu timeout custom dl miliseconds
-    baseUrl: "https://www.saucedemo.com/"
+    baseUrl: "https://www.saucedemo.com/",
+    env: {
+      valid_username: "standard_user",
+      valid_password: "secret_sauce"
+    },
+    //buat tugas nanti
+    // viedo : true,
   },
 });
