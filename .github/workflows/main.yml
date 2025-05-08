@@ -35,8 +35,8 @@ jobs:
 
       - name: Run Cypress tests
         run: ./node_modules/.bin/cypress run
-        
-      - name: Deploy report page
+
+      - name: Deploy Report page
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
