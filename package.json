@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "test:e2e": "npx cypress run  --headless --browser chrome --spec 'cypress/e2e/4-sauce demo/simple.cy.js'"
+    "test:e2e": "npx cypress run  --headless --browser chrome --spec 'cypress/e2e/4-sauce demo/simple.cy.js'",
+    "test:e2e:normal": "npx cypress run  --headless --browser chrome 'cypress/e2e/4-sauce demo/simple.cy.js'",
+    "merge:report": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json",
+    "generate:report": "npx marge cypress/reports/merged.json --reportDir cypress/reports/html",
+    "test:report": "npm run test:e2e:normal && npm run merge:report && npm run generate:report"
   },
   "keywords": [],
   "author": "",
