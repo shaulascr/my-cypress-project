@@ -1,5 +1,8 @@
 name: Cypress Tests UI
 
+permissions:
+  contents: write
+
 on:
     # otomatis push
   push:
